@@ -6,20 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="通过改造已有插件，形成Obsidian编写文档，Hexo和MkDocs发布的流程">
+        <meta name="description" content="foobar2000中歌单导入导出方法介绍。主要包含foobar2000的SQLite插件在导入导出中的应用">
       
       
         <meta name="author" content="chushen">
       
       
-        <link rel="canonical" href="https://md.chushen.xyz/20220712163320/">
+        <link rel="canonical" href="https://md.chushen.xyz/20220816125305/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>使用Obsidian、Hexo、MkDocs搭建个人博客 - CHUSHEN</title>
+        <title>foobar2000歌单导入导出 - CHUSHEN</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#obsidianhexomkdocs" class="md-skip">
+        <a href="#foobar2000" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用Obsidian、Hexo、MkDocs搭建个人博客
+              foobar2000歌单导入导出
             
           </span>
         </div>
@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../20220712163320/" class="md-tabs__link md-tabs__link--active">
         其他
       </a>
     </li>
@@ -432,14 +432,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
       
       
       
@@ -460,153 +458,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用Obsidian、Hexo、MkDocs搭建个人博客
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../20220712163320/" class="md-nav__link">
         使用Obsidian、Hexo、MkDocs搭建个人博客
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    实现流程
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    实现步骤
-  </a>
-  
-    <nav class="md-nav" aria-label="实现步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obsidian" class="md-nav__link">
-    Obsidian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hexo" class="md-nav__link">
-    Hexo
-  </a>
-  
-    <nav class="md-nav" aria-label="Hexo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hexo_1" class="md-nav__link">
-    Hexo使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdocs" class="md-nav__link">
-    MkDocs
-  </a>
-  
-    <nav class="md-nav" aria-label="MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    思路
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdocs_1" class="md-nav__link">
-    MkDocs使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    成果
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    已知不足
-  </a>
-  
-    <nav class="md-nav" aria-label="已知不足">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocs_2" class="md-nav__link">
-    MkDocs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#categories" class="md-nav__link">
-    Categories
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -623,12 +479,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
       
       
       
@@ -691,11 +549,147 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../20220816125305/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          foobar2000歌单导入导出
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         foobar2000歌单导入导出
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    导入
+  </a>
+  
+    <nav class="md-nav" aria-label="导入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一些方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    SQLite导入
+  </a>
+  
+    <nav class="md-nav" aria-label="SQLite导入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    前言
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    准备歌曲
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    建表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    列表插入匹配歌曲
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    导出
+  </a>
+  
+    <nav class="md-nav" aria-label="导出">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    一些方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite_1" class="md-nav__link">
+    SQLite导出
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categories" class="md-nav__link">
+    Categories
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -742,96 +736,90 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    实现流程
+    导入
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="导入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    实现步骤
-  </a>
-  
-    <nav class="md-nav" aria-label="实现步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obsidian" class="md-nav__link">
-    Obsidian
+    一些方法
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hexo" class="md-nav__link">
-    Hexo
+  <a href="#sqlite" class="md-nav__link">
+    SQLite导入
   </a>
   
-    <nav class="md-nav" aria-label="Hexo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hexo_1" class="md-nav__link">
-    Hexo使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdocs" class="md-nav__link">
-    MkDocs
-  </a>
-  
-    <nav class="md-nav" aria-label="MkDocs">
+    <nav class="md-nav" aria-label="SQLite导入">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    思路
+    前言
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mkdocs_1" class="md-nav__link">
-    MkDocs使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    成果
+    准备歌曲
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    建表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    列表插入匹配歌曲
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    已知不足
+  <a href="#_8" class="md-nav__link">
+    导出
   </a>
   
-    <nav class="md-nav" aria-label="已知不足">
+    <nav class="md-nav" aria-label="导出">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mkdocs_2" class="md-nav__link">
-    MkDocs
+  <a href="#_9" class="md-nav__link">
+    一些方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite_1" class="md-nav__link">
+    SQLite导出
   </a>
   
 </li>
@@ -861,7 +849,7 @@
               
   
                 
-  <a href="https://github.com/chu-shen/mkdocs-blog/edit/master/docs/20220712163320.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/chu-shen/mkdocs-blog/edit/master/docs/20220816125305.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
@@ -869,24 +857,22 @@
 
 <div class="toc">
 <ul>
-<li><a href="#obsidianhexomkdocs">使用Obsidian、Hexo、MkDocs搭建个人博客</a><ul>
-<li><a href="#_1">实现流程</a></li>
-<li><a href="#_2">实现步骤</a><ul>
-<li><a href="#obsidian">Obsidian</a></li>
-<li><a href="#hexo">Hexo</a><ul>
-<li><a href="#hexo_1">Hexo使用</a></li>
+<li><a href="#foobar2000">foobar2000歌单导入导出</a><ul>
+<li><a href="#_1">导入</a><ul>
+<li><a href="#_2">一些方法</a></li>
+<li><a href="#sqlite">SQLite导入</a><ul>
+<li><a href="#_3">前言</a></li>
+<li><a href="#_4">准备歌曲</a></li>
+<li><a href="#_5">建表</a></li>
+<li><a href="#_6">列表插入匹配歌曲</a></li>
+<li><a href="#_7">其他操作</a></li>
 </ul>
 </li>
-<li><a href="#mkdocs">MkDocs</a><ul>
-<li><a href="#_3">思路</a></li>
-<li><a href="#mkdocs_1">MkDocs使用</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_4">成果</a></li>
-<li><a href="#_5">已知不足</a><ul>
-<li><a href="#mkdocs_2">MkDocs</a></li>
+<li><a href="#_8">导出</a><ul>
+<li><a href="#_9">一些方法</a></li>
+<li><a href="#sqlite_1">SQLite导出</a></li>
 </ul>
 </li>
 <li><a href="#categories">Categories</a></li>
@@ -894,92 +880,121 @@
 </li>
 </ul>
 </div>
-<h1 id="obsidianhexomkdocs">使用Obsidian、Hexo、MkDocs搭建个人博客<a class="headerlink" href="#obsidianhexomkdocs" title="Permanent link">&para;</a></h1>
+<h1 id="foobar2000">foobar2000歌单导入导出<a class="headerlink" href="#foobar2000" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>本文档最后更新于：<strong>2022-07-12 18:29</strong> ，请注意文章时效性！</p>
+<p>本文档最后更新于：<strong>2022-08-16 22:55</strong> ，请注意文章时效性！</p>
 </blockquote>
-<h2 id="_1">实现流程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><img alt="Obsidian、Hexo、MkDocs流转图.excalidraw" src="../images/Obsidian%E3%80%81Hexo%E3%80%81MkDocs%E6%B5%81%E8%BD%AC%E5%9B%BE.excalidraw.svg" /></p>
-<h2 id="_2">实现步骤<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="obsidian">Obsidian<a class="headerlink" href="#obsidian" title="Permanent link">&para;</a></h3>
-<p>使用Obsidian正常完成文档的编写。如果要联动Hexo，则还需进行如下配置：</p>
-<ol>
-<li>文档元数据必须包含<code>abbrlink</code>字段。该字段用于生成永久链接，否则404</li>
-<li>安装<a href="https://github.com/moelody/link-info-server">Link Server Plugin</a>，通过API提供Obsidian文件信息</li>
-</ol>
-<h3 id="hexo">Hexo<a class="headerlink" href="#hexo" title="Permanent link">&para;</a></h3>
-<p>除了常规配置外，还需要安装以下插件：</p>
-<ol>
-<li><a href="https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a>：用于生成永久链接，对应Obsidian的<code>abbrlink</code>字段</li>
-<li><a href="https://github.com/moelody/hexo-link-obsidian">hexo-link-obsidian</a>：用于请求Obsidian插件，获取文档信息。处理图片、视频、wiki等链接。<ul>
-<li>图片被拷贝至<code>posts</code>目录</li>
-<li>如果转换后的链接文档不在hexo的<code>_posts</code>目录中，则此链接修正为404</li>
-</ul>
-</li>
-</ol>
-<h4 id="hexo_1">Hexo使用<a class="headerlink" href="#hexo_1" title="Permanent link">&para;</a></h4>
-<p>至此完成了Obsidian和Hexo的联动，只需要执行以下操作即可：</p>
-<ol>
-<li>拷贝Obsidian文档至Hexo的<code>_posts</code>目录</li>
-<li>Hexo生成并发布</li>
-</ol>
-<h3 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h3>
-<p><font color=white>虽然Hexo非常不错，但不折腾就难受</font></p>
-<p>鉴于Hexo部分已经把该做的都做了，这里直接偷懒，拷贝一份Hexo处理后的文件到MkDocs目录。</p>
-<h4 id="_3">思路<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<blockquote>
-<p>[!note] 目录说明</p>
-<p>Hexo与MkDocs目录需要在同一级</p>
-</blockquote>
-<p><strong>TL;DR</strong></p>
-<p>使用<a href="https://github.com/chu-shen/hexo-link-obsidian/blob/mkdocs/index.js">该文件</a>替换<code>Hexo/node_modules/hexo-link-obsidian/index.js</code>即可</p>
-<p><strong>思路如下：</strong></p>
-<ol>
-<li>在Hexo执行图片拷贝时，同时复制一份到MkDocs的<code>MkDocs/docs/images</code>目录</li>
-<li>将Hexo处理后的MD文件输出到MkDocs的<code>MkDocs/docs</code>目录<ul>
-<li>处理不正确的URL</li>
-<li>重新添加元数据信息到处理后的MD</li>
-<li>写入到<code>abbrlink.md</code>文件</li>
-</ul>
-</li>
-<li>将处理后的文件链接写入到<code>MkDocs/docs/SUMMARY.md</code>，推荐搭配mkdocs-literate-nav插件使用</li>
-</ol>
-<h4 id="mkdocs_1">MkDocs使用<a class="headerlink" href="#mkdocs_1" title="Permanent link">&para;</a></h4>
-<p>至此完成Hexo与MkDocs的联动，在<a href="/20220712163320#Hexo%E4%BD%BF%E7%94%A8" data-pjax-state target="_Blank">前两步</a>的基础上执行：</p>
-<ol>
-<li>整理<code>SUMMARY.md</code>，构建nav导航</li>
-<li>MkDocs生成并发布</li>
-</ol>
-<h2 id="_4">成果<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_1">导入<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">一些方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
+<li>导入fpl/m3u/m3u8</li>
 <li>
-<p><a href="https://chushen.xyz/20220712163320/">Hexo</a></p>
-</li>
-<li>
-<p><a href="https://md.chushen.xyz/20220712163320/">MkDocs</a></p>
+<p>使用<a href="/404#%E6%92%AD%E6%94%BE%E8%AE%B0%E5%BD%95" data-pjax-state target="_Blank">Last.fm</a>插件导入<a href="https://www.xspf.org/">XSPF</a>，元数据必须包括<code>title</code>和<code>creator</code>，格式参照下面：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;playlist</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://xspf.org/ns/0/&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nt">&lt;trackList&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>          <span class="nt">&lt;track&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>              <span class="nt">&lt;location&gt;</span>https://music.163.com/song?id=544000653<span class="nt">&lt;/location&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>              <span class="nt">&lt;title&gt;</span>Is This Love<span class="nt">&lt;/title&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>              <span class="nt">&lt;album&gt;</span>THE IDOLM@STER MASTER SPECIAL 03<span class="nt">&lt;/album&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>              <span class="nt">&lt;creator&gt;</span>我那覇響<span class="nt">&lt;/creator&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            <span class="nt">&lt;/track&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nt">&lt;/trackList&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">&lt;/playlist&gt;</span>
+</code></pre></div>
 </li>
 </ul>
-<h2 id="_5">已知不足<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocs_2">MkDocs<a class="headerlink" href="#mkdocs_2" title="Permanent link">&para;</a></h3>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> Categories界面点击分类并无对应子界面</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Categories不兼容当前使用的格式</li>
-<li class="task-list-item"><input type="checkbox" disabled/> RSS无法使用</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Tag不完善</li>
-<li class="task-list-item"><input type="checkbox" disabled/> MkDocs的标题链接为英文+编号，无法对应</li>
+<h3 id="sqlite">SQLite导入<a class="headerlink" href="#sqlite" title="Permanent link">&para;</a></h3>
+<h4 id="_3">前言<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>本文的导入导出工具都存在各种各样的问题。<del>为了提高准确度和效率</del>，采用<a href="/404#sqlite" data-pjax-state target="_Blank">sqlite</a>编写SQL进行处理。</p>
+<p>SQL编辑器👇：</p>
+<p><img alt="Pasted image 20220810214137" src="../images/Pasted%20image%2020220810214137.png" /></p>
+<blockquote>
+<p>[!danger] 注意事项
+为了在创建播放列表后更新数据库，需要开启下面的选项（说明见<code>AdvancedOptions.html</code>）：
+<img alt="Pasted image 20220526145448" src="../images/Pasted%20image%2020220526145448.png" /></p>
+<p><strong>注意！！！</strong>：此插件在使用时存在极大的闪退风险。因此在使用前请先退出foobar2000（自动保存更新数据，如：歌曲等级），然后重新打开使用。再确认导入的歌单大致符合要求后，重来一遍上述操作。</p>
+</blockquote>
+<h4 id="_4">准备歌曲<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>[!tip]
+- 歌曲名中<code>'</code>需转义，改为<code>''</code></p>
+</blockquote>
+<p>首先将需<a href="/20220525150943#%E5%AF%BC%E5%87%BA%E5%88%B0%E6%9C%AC%E5%9C%B0" data-pjax-state target="_Blank">导入的歌曲标题</a>复制出来，标题之间以这三个符号(<code>','</code>)分隔，首尾添加<code>'</code></p>
+<h4 id="_5">建表<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>首先创建虚拟表<code>Import_From_NetEase</code>和标题表：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">VIRTUAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Import_From_NetEase</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">MetaDB_Module</span><span class="p">(</span><span class="n">no_multivalue_split</span><span class="p">,</span><span class="w"> </span><span class="n">playlist</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">-- 其他可选操作👇</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">-- 创建包含标题名的表</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">NetEase_Titles</span><span class="p">(</span><span class="n">titleName</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">-- 插入得到的标题</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">NetEase_Titles</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Is This Love&#39;</span><span class="p">),(</span><span class="s1">&#39;遠い音楽&#39;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">-- 清空表（导入其他标题前执行）</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">NetEase_Titles</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1">-- 删除表（完工退出时执行）</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">NetEase_Titles</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></p>
+<h4 id="_6">列表插入匹配歌曲<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>插入完全匹配歌曲。用<a href="/20220816125305#%E5%87%86%E5%A4%87%E6%AD%8C%E6%9B%B2" data-pjax-state target="_Blank">准备歌曲</a>步骤的结果替换下面的<code>'菫','黒の剣巫'</code>：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Import_From_NetEase</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">subsong</span><span class="p">,</span><span class="w"> </span><span class="n">playlist_name</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">subsong</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="s1">&#39;需要插入的播放列表，可自动创建&#39;</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">MediaLibrary</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">IN</span><span class="p">(</span><span class="s1">&#39;菫&#39;</span><span class="p">,</span><span class="s1">&#39;黒の剣巫&#39;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">-- 其他过滤条件，比特率大于320，专辑以THE IDOLM@STER开头</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">--bitrate&gt;320 AND album LIKE &#39;THE IDOLM@STER%&#39; AND</span>
+</code></pre></div></p>
+<h4 id="_7">其他操作<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>插入<code>播放列表b</code>中不存在的<code>播放列表a</code>的歌曲到<code>待插入的列表</code>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Import_From_NetEase</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">subsong</span><span class="p">,</span><span class="w"> </span><span class="n">playlist_name</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">subsong</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="s1">&#39;待插入的列表&#39;</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">Playlist</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">playlist_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;播放列表a&#39;</span><span class="w"></span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="w"></span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Playlist</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">playlist_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;播放列表b&#39;</span><span class="w"></span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">);</span><span class="w"></span>
+</code></pre></div></li>
+<li>输出未匹配到的歌曲
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">titleName</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">NetEase_Titles</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">titleName</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Playlist</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">playlist_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;播放列表&#39;</span><span class="w"></span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">);</span><span class="w"></span>
+</code></pre></div></li>
+</ol>
+<h2 id="_8">导出<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">一些方法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>保存为fpl（二进制）</li>
+<li>保存为m3u（部分字符不支持），仅文件名</li>
+<li>保存为m3u8，仅文件名</li>
+<li>使用<a href="/404#%E6%92%AD%E6%94%BE%E8%AE%B0%E5%BD%95" data-pjax-state target="_Blank">Last.fm</a>插件导出为<a href="https://www.xspf.org/">XSPF</a>，包括：<code>title</code>、<code>creator</code>、<code>album</code>、<code>trackNum</code>、<code>duration</code>。编码方式貌似有问题，存在乱码问题</li>
+<li>其他插件（未验证）：<a href="https://github.com/Chocobo1/foo_xspf_1">GitHub - Chocobo1/foo_xspf_1: Import &amp; export XSPF playlist in foobar2000</a></li>
 </ul>
+<h3 id="sqlite_1">SQLite导出<a class="headerlink" href="#sqlite_1" title="Permanent link">&para;</a></h3>
+<p>执行SQL后，在结果上右键复制即可</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">Playlist</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">playlist_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;播放列表&#39;</span><span class="w"></span>
+</code></pre></div>
+<p>然后使用<a href="/20220815145511#%E4%B8%A4%E5%88%97%E5%8E%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9" data-pjax-state target="_Blank">Excel操作</a>筛选未匹配歌曲啥的~~</p>
 <p><br/></p>
 <div class="blogging-tags-grid">
 
-        <a href="https://md.chushen.xyz/tags#博客" class="blogging-tag"><code>#博客</code></a>
+        <a href="https://md.chushen.xyz/tags#音乐" class="blogging-tag"><code>#音乐</code></a>
 
-        <a href="https://md.chushen.xyz/tags#网站" class="blogging-tag"><code>#网站</code></a>
+        <a href="https://md.chushen.xyz/tags#歌单" class="blogging-tag"><code>#歌单</code></a>
 
-        <a href="https://md.chushen.xyz/tags#obsidian" class="blogging-tag"><code>#obsidian</code></a>
-
-        <a href="https://md.chushen.xyz/tags#hexo" class="blogging-tag"><code>#hexo</code></a>
-
-        <a href="https://md.chushen.xyz/tags#mkdocs" class="blogging-tag"><code>#mkdocs</code></a>
+        <a href="https://md.chushen.xyz/tags#foobar2000" class="blogging-tag"><code>#foobar2000</code></a>
 
     </div>
 
@@ -1004,7 +1019,7 @@
 
 <h2 id="categories">Categories<a class="headerlink" href="#categories" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../categories//">['网站/博客']</a></li>
+<li><a href="../categories//">['音乐']</a></li>
 </ul>
 
               
@@ -1074,7 +1089,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../categories/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Categories" rel="prev">
+        <a href="../20220816125806/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 自动化处理音乐专辑" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1083,26 +1098,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Categories
+              自动化处理音乐专辑
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../20220816220810/" class="md-footer__link md-footer__link--next" aria-label="Next: 网易云音乐歌单迁移至foobar2000流程" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              网易云音乐歌单迁移至foobar2000流程
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
